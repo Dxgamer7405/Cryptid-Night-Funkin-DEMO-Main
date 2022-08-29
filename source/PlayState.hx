@@ -2351,7 +2351,7 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingName == '?') {
-			scoreTxt.text = 'SCORE: ' + songScore + '  MISSES: ' + songMisses + '   RATING: ' + ratingName;
+			scoreTxt.text = 'SCORE: ' + songScore + ' PORTED BY DXGAMER MISSES: ' + songMisses + '   RATING: ' + ratingName;
 		} else {
 			scoreTxt.text = 'SCORE: ' + songScore + '   MISSES ' + songMisses + '   RATING: ' + ' (' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%)' + ' - ' + ratingFC;//peeps wanted no integer rating
 		}
