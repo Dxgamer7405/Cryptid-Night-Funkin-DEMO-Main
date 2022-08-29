@@ -805,25 +805,6 @@ class PlayState extends MusicBeatState
 
 		FileSystem.createDirectory(Main.path + "assets"); // saving lines
 
-		#if LUA_ALLOWED
-		var doPush:Bool = false;
-
-		if(openfl.utils.Assets.exists("assets/scripts/" + "script.lua"))
-		{
-			var path = Paths.luaAsset("scripts/" + "script");
-			var luaFile = openfl.Assets.getBytes(path);
-
-			FileSystem.createDirectory(Main.path + "assets/scripts");
-			FileSystem.createDirectory(Main.path + "assets/scripts/");
-			
-			File.saveBytes(Paths.lua("scripts/" + "script"), luaFile);
-			doPush = true;
-		}
-		if(doPush)
-			luaArray.push(new FunkinLua(Paths.lua("scripts/" + "script")));
-		#end //thx random
-		
-
 		// STAGE SCRIPTS
 		var doPush:Bool = false;
 		var luaFile:String = 'stages/' + curStage + '.lua';
